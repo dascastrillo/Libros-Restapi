@@ -7,12 +7,8 @@ DEBUG = True
 #importar los datos libros
 from libros import libros
 
-#ruta de error 404
-def not_found(error):
-    return "Not Found."
-
 #ruta de saludar a la pagina
-@app.route("/", methods=["GET"])
+@app.route("/")
 def index():
     print('Bienvenido a mi API REST')
 
