@@ -6,11 +6,6 @@ app = Flask (__name__)
 #importar los datos libros
 from libros import libros
 
-#ruta de saludar a la pagina
-@app.route('/')
-def saludo():
-    print('Bienvenido a mi API REST')
-
 #ruta.
 @app.route('/libreria')
 #mostrar los datos de mi json.
@@ -66,3 +61,8 @@ def eliminarlibros(libros_autor):
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
+    
+#ruta de saludar a la pagina
+@app.route('/')
+def saludo():
+    print('Bienvenido a mi API REST')
