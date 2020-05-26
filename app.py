@@ -8,9 +8,9 @@ DEBUG = True
 from libros import libros
 
 #ruta de saludar a la pagina
-@app.route("https://lenguaje-marcas.herokuapp.com/")
+@app.route("/")
 def index():
-    return print('Bienvenido a mi API REST')
+    return jsonify({"mensaje": "Hola"})
 
 #ruta.
 @app.route('/libreria')
