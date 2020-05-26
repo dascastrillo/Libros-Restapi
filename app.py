@@ -1,7 +1,6 @@
 #Para hacer una API hay que instalar en el visual studio code el flask
 
-from flask import Flask, jsonify, request, render_template
-import sys
+from flask import Flask, jsonify, request
 import logging
 app = Flask (__name__)
 
