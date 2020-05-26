@@ -3,7 +3,7 @@
 from flask import Flask, jsonify, request
 app = Flask (__name__)
 PORT = 4000
-DEBUG = True
+DEBUG = False
 #importar los datos libros
 from libros import libros
 
