@@ -2,15 +2,20 @@
 
 from flask import Flask, jsonify, request
 app = Flask (__name__)
-
+PORT = 5000
+DEBUG = False
 #importar los datos libros
 from libros import libros
 
+#ruta de error 404
+def not_found(error):
+    return "Not Found."
+
 #ruta de saludar a la pagina
-@app.route("/")
-def saludo():
+@app.route("/", methods=["GET"])
+def index():
     print('Bienvenido a mi API REST')
-    
+
 #ruta.
 @app.route('/libreria')
 #mostrar los datos de mi json.
@@ -65,5 +70,4 @@ def eliminarlibros(libros_autor):
     return jsonify({'mensaje': 'producto no encontrado'})
 
 if __name__ == '__main__':
-    app.debug = True
-    app.run()
+    app.run(port = PORT, debug= DEBUG)
