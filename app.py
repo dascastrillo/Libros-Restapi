@@ -8,8 +8,6 @@ app = Flask (__name__)
 app.logger.addHandler(logging.StreamHandler(sys.stdout))
 app.logger.setLevel(logging.ERROR)
 
-api = api(app)
-
 #importar los datos libros
 from libros import libros
 
@@ -73,3 +71,4 @@ def eliminarlibros(libros_autor):
 if __name__ == '__main__':
     app.debug = True
     app.run()
+    api = api(app)
