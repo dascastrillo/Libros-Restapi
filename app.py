@@ -1,12 +1,7 @@
 #Para hacer una API hay que instalar en el visual studio code el flask
 
-from flask import Flask, jsonify, request, render_template
-import sys
-import logging
+from flask import Flask, jsonify, request
 app = Flask (__name__)
-
-app.logger.addHandler(logging.StreamHandler(sys.stdout))
-app.logger.setLevel(logging.ERROR)
 
 #importar los datos libros
 from libros import libros
@@ -71,4 +66,3 @@ def eliminarlibros(libros_autor):
 if __name__ == '__main__':
     app.debug = True
     app.run()
-    api = api(app)
